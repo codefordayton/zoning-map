@@ -1,0 +1,20 @@
+<div class="nav">
+
+    <div class="nav-logo">
+        <!--<div><a ng-click="goto('/')"><img src="images/zm-transparent-128.png" class="img-responsive"></img></a></div>-->
+        <div><a ng-click="goto('/')">Zoning Map</a></div>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-link" ng-class="{map: 'selected'}[activePage]" ng-click="goto('/')">
+        Map
+        </div>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-link" ng-class="{about: 'selected'}[activePage]" ng-click="goto('/about')">
+        About
+        </div>
+    </div>
+
+</div>
