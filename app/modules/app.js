@@ -39,5 +39,6 @@
             });
     })
     .value('moment', window.moment)
-    .value('localStorage', window.localStorage);
+    .value('localStorage', window.localStorage)
+    .value('L', window.L);
 })();

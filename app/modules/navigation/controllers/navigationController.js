@@ -11,7 +11,7 @@
         };
 
         var locationUpdated = function() {
-            $scope.activePage = navService.location;
+            $scope.activePage = navigationService.location;
         };
 
         var initialize = function() {

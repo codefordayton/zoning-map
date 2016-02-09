@@ -1,9 +1,9 @@
 (function () {
     'use strict';
 
-    angular.module('zoningMapApp').controller('aboutController', function($scope, $location, $window, navService) {
+    angular.module('zoningMapApp').controller('aboutController', function($scope, $location, $window, navigationService) {
         var initialize = function() {
-            navService.updateLocation('about');
+            navigationService.updateLocation('about');
         };
         initialize();
     });

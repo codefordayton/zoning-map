@@ -1,0 +1,22 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-84.311377, 39.920823],
+          [-84.092938, 39.920823],
+          [-84.092938, 39.701834],
+          [-84.311377, 39.701834],
+          [-84.311377, 39.920823]
+        ]]
+      },
+      "properties": {
+        "name": "Dayton, OH",
+        "description": "Attached to the ground. Intelligently places itself\n       at the height of the underlying terrain."
+      }
+    }
+  ]
+}
