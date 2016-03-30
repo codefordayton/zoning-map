@@ -13,7 +13,8 @@ var gulp = require('gulp'),
     ngAnnotate = require('gulp-ng-annotate'),
     tar = require('gulp-tar'),
     gzip = require('gulp-gzip'),
-    p = require('./package.json');
+    p = require('./package.json'),
+    proxy = require('http-proxy-middleware');
 
 var paths = {
     styles: ['./app/styles/**/*.less','!./app/styles/variables/bootstrap-overrides.less'],
@@ -224,7 +225,16 @@ gulp.task('connect', ['build'], function () {
     connect.server({
         port: 9000,
         root: 'build',
-        livereload: true
+        livereload: true,
+        middleware: function(connect, opt) {
+            return [
+                proxy('/arcgis', {
+                    target: 'http://maps.cityofdayton.org',
+                    changeOrigin:true,
+                    hostRewrite:'localhost:9000'
+                })
+            ]
+        }
     });
 });
 
